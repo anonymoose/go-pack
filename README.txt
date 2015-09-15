@@ -13,3 +13,7 @@ Path settings in ~/.profile
 export GOROOT=/usr/local/go
 export GOPATH=~/dev/godev
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+Follow instructions here to get Delve debugger to work.
+https://github.com/derekparker/delve/wiki/Building
