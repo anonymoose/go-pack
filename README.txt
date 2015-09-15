@@ -6,8 +6,9 @@ http://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scr
 *Prerequisites*
 
 Go projects used
-go get github.com/rogpeppe/godef
+go get -u -v github.com/rogpeppe/godef
 go get -u -v github.com/nsf/gocode
+go get -u -v github.com/dougm/goflymake
 
 Path settings in ~/.profile
 export GOROOT=/usr/local/go

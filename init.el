@@ -12,5 +12,9 @@
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 
+(live-add-pack-lib "goflymake")
+(require 'go-flymake)
+;(require 'go-flycheck)
+
 ;; Load go-pack settings
 (live-load-config-file "settings.el")
