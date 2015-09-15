@@ -13,6 +13,3 @@ Path settings in ~/.profile
 export GOROOT=/usr/local/go
 export GOPATH=~/dev/godev
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-
-//cp src/github.com/nsf/gocode/emacs/go-autocomplete.el ~/.live-packs/go-pack/lib/
