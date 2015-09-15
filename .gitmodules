@@ -1,0 +1,6 @@
+[submodule "lib/go-mode.el"]
+	path = lib/go-mode.el
+	url = https://github.com/dominikh/go-mode.el
+[submodule "lib/goflymake"]
+	path = lib/goflymake
+	url = https://github.com/dougm/goflymake
