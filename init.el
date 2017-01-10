@@ -7,6 +7,7 @@
 (live-add-pack-lib "go-mode.el")
 (require 'go-mode-autoloads)
 ;(require 'go-mode)
+(require 'go-guru)    ; https://github.com/dominikh/go-mode.el/blob/master/go-guru.el
 
 (live-add-pack-lib "go-autocomplete")
 (require 'go-autocomplete)

@@ -13,6 +13,7 @@ brew install go-delve/delve/delve --HEAD
 go get -u -v github.com/rogpeppe/godef
 go get -u -v github.com/nsf/gocode
 go get -u -v github.com/dougm/goflymake
+go get -u -v golang.org/x/tools/cmd/guru
 
 Path settings in ~/.profile
 export GOROOT=/usr/local/go
