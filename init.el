@@ -11,6 +11,7 @@
 (live-add-pack-lib "go-autocomplete")
 (require 'go-autocomplete)
 (require 'auto-complete-config)
+(ac-config-default)
 
 (live-add-pack-lib "goflymake")
 (require 'go-flymake)
