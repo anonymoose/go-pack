@@ -6,6 +6,10 @@ http://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scr
 *Prerequisites*
 
 Go projects used
+brew install go
+brew install glide
+brew install go-delve/delve/delve --HEAD
+
 go get -u -v github.com/rogpeppe/godef
 go get -u -v github.com/nsf/gocode
 go get -u -v github.com/dougm/goflymake
@@ -18,3 +22,4 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 Follow instructions here to get Delve debugger to work.
 https://github.com/derekparker/delve/wiki/Building
+https://blog.gopheracademy.com/advent-2015/debugging-with-delve/

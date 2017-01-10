@@ -17,5 +17,9 @@
 (require 'go-flymake)
 ;(require 'go-flycheck)
 
+(live-add-pack-lib "go-dlv.el")
+(require 'go-dlv)
+
+
 ;; Load go-pack settings
 (live-load-config-file "settings.el")
