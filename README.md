@@ -19,6 +19,12 @@ go get -u -v github.com/dougm/goflymake
 
 go get -u -v golang.org/x/tools/cmd/guru
 
+go get -u github.com/golang/lint/golint
+
+go get -u golang.org/x/tools/cmd/goimports
+
+go get -u github.com/go-swagger/go-swagger/cmd/swagger
+
 # Path settings in ~/.profile
 
 export GOROOT=/usr/local/go
@@ -35,3 +41,7 @@ Follow instructions here to get Delve debugger to work.
 https://github.com/derekparker/delve/wiki/Building
 
 https://blog.gopheracademy.com/advent-2015/debugging-with-delve/
+
+# Notes
+
+- Ensure that `go install` is part of your process.  auto complete doesn't work off of `go build`

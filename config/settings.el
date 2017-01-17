@@ -6,26 +6,30 @@
 
 (setenv "GOROOT" "/usr/local/opt/go/libexec")
 (setenv "GOPATH" "/Users/ken.bedwell/dev/godev")
+;(setenv "GOPATH" "/Users/ken.bedwell/dev/godev:/Users/ken.bedwell/dev/godev/src:/Users/ken.bedwell/dev/godev/src/github.com/randrr/fingerprint-service/vendor")
 (setenv "GO15VENDOREXPERIMENT" "1")
 
-(defun local-go-mode-hook ()
-  ; Call Gofmt before saving
+(add-hook 'go-mode-hook 'go-eldoc-setup)
+
+(defun go-mode-setup ()
+  (go-eldoc-setup)
+  (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save)
+  (local-set-key (kbd "M-.") 'godef-jump)
+
   (setq tab-width 4)
   (setq indent-tabs-mode 1)
-  ; Customize compile command to run go build
-  (if (not (string-match "go" compile-command))
-      (set (make-local-variable 'compile-command)
-           "go generate && go build -v && go test -v && go vet"))
-  ; Godef jump key binding
-  (local-set-key (kbd "M-.") 'godef-jump))
+  (setq compile-command "go build -v && go test -v && go vet && golint")
+  (define-key (current-local-map) "\C-d\C-c" 'compile)
+)
 
-(add-hook 'go-mode-hook 'local-go-mode-hook)
+(add-hook 'go-mode-hook 'go-mode-setup)
+(add-hook 'go-mode-hook #'go-guru-hl-identifier-mode)
 
-(defun auto-complete-for-go ()
-  (auto-complete-mode 1))
+;; (defun auto-complete-for-go ()
+;;   (auto-complete-mode 1))
 
-(add-hook 'go-mode-hook 'auto-complete-for-go)
+;; (add-hook 'go-mode-hook 'auto-complete-for-go)
 
-(with-eval-after-load 'go-mode
-   (require 'go-autocomplete))
+;; (with-eval-after-load 'go-mode
+;;    (require 'go-autocomplete))

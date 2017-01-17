@@ -10,17 +10,23 @@
 (require 'go-guru)    ; https://github.com/dominikh/go-mode.el/blob/master/go-guru.el
 
 (live-add-pack-lib "go-autocomplete")
-(require 'go-autocomplete)
-(require 'auto-complete-config)
 (ac-config-default)
+(require 'auto-complete-config)
+(require 'go-autocomplete)
 
-(live-add-pack-lib "goflymake")
-(require 'go-flymake)
-;(require 'go-flycheck)
+
+;(live-add-pack-lib "goflymake")
+;(require 'go-flymake)
+;;;;;;  doesn't work - (require 'go-flycheck)
 
 (live-add-pack-lib "go-dlv.el")
 (require 'go-dlv)
 
+(live-add-pack-lib "go-eldoc")
+(require 'go-eldoc)
+
+(live-add-pack-lib "golint")
+(require 'golint)
 
 ;; Load go-pack settings
 (live-load-config-file "settings.el")
